@@ -6,7 +6,9 @@ var port = process.env.PORT || 1337;
 
 var server = http.createServer(function(request, response) {
     response.writeHead(200, {"Content-Type": "text/html"});
-    response.write('Connecting \n');
+
+
+    /**response.write('Connecting \n');
     MongoClient.connect(url, function (err, db) {
         response.write('Connection Made \n');
         if (err) {
@@ -23,7 +25,7 @@ var server = http.createServer(function(request, response) {
             db.close();
         }
         response.end('Finished, Connection closed \n');
-    });
+    });*/
 
 
 
