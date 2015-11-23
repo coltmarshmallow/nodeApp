@@ -1,7 +1,7 @@
 /**
  * Created by 1301657 on 23/11/2015.
  */
-var http = require('http')
+var http = require('http');
 var port = process.env.PORT || 1337;
 
 var server = http.createServer(function(request, response) {
