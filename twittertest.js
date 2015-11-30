@@ -13,6 +13,13 @@ var client = new Twitter({
     access_token_secret: 'bLhNRxW1FgCM2R4lhhFhSqEcPwhIAsGmvKv6kEn6dX9K1'
 });
 
+var json = [];
+
+for (var i =0; i< tweets.statuses.length; i++)
+{
+    json.push({name: tweets.statuses[i].user.name, text: tweets.statuses[i].text})
+}
+
 http.createServer(function(request, response) {
     response.writeHead(200, { 'Content-Type': 'application/json',
         'Access-Control-Allow-Origin' : '*' });
